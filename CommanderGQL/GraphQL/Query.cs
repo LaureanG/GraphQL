@@ -10,10 +10,5 @@ namespace CommanderGQL.GraphQL
         {
             return context.Platforms;
         }
-
-        // public IQueryable<Platform> GetPlatforms()
-        // {
-
-        // }
     }
 }
