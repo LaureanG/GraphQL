@@ -20,8 +20,10 @@ namespace CommanderGQL
             //services.AddRazorPages();
             services.AddPooledDbContextFactory<AppDbContext>(opt => opt.UseSqlServer
             (Configuration.GetConnectionString("DBConnectionString")));
-            services.AddGraphQLServer()
-            .AddQueryType<Query>();
+            services
+            .AddGraphQLServer()
+            .AddQueryType<Query>()
+            .AddProjections();
         }
 
         public void Configure(WebApplication app, IWebHostEnvironment env){

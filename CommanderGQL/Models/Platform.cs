@@ -4,7 +4,7 @@ namespace CommanderGQL.Models
 {
     public class Platform
     {
-        [KeyAttribute]
+        [Key]
         public int Id { get; set; }
         
         [Required]
@@ -12,5 +12,6 @@ namespace CommanderGQL.Models
 
         public string? LicenseKey { get; set; }
 
+        public ICollection<Command> Commands { get; set; } = new List<Command>();
     }
 }
