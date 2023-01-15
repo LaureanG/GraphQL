@@ -4,6 +4,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using CommanderGQL.Data;
 using CommanderGQL.GraphQL;
+using GraphQL.Server.Ui.Voyager;
 
 namespace CommanderGQL
 {
@@ -35,6 +36,10 @@ namespace CommanderGQL
                 endpoints.MapGraphQL();
             });
             
+            app.UseGraphQLVoyager("/graphql-voyager",new VoyagerOptions()
+            {
+                GraphQLEndPoint = "/graphql"
+            });
             app.Run();
         }
     }
