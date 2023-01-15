@@ -16,7 +16,7 @@ namespace CommanderGQL
         }
 
         public void ConfigureServices(IServiceCollection services){
-            services.AddRazorPages();
+            //services.AddRazorPages();
             services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer
             (Configuration.GetConnectionString("DBConnectionString")));
             services.AddGraphQLServer()
@@ -28,8 +28,8 @@ namespace CommanderGQL
             // app.UseStaticFiles();
             app.UseRouting();
             // app.UseAuthorization();
-            app.MapRazorPages();
-            app.MapGet("/", () => "Hello World!");
+            //app.MapRazorPages();
+            //app.MapGet("/", () => "Hello World!");
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGraphQL();
