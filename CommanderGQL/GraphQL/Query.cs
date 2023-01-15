@@ -13,7 +13,6 @@ namespace CommanderGQL.GraphQL
         }
 
         [UseDbContext(typeof(AppDbContext))]
-        [UseProjection]
         public IQueryable<Command> GetCommand([ScopedService] AppDbContext context)
         {
             return context.Commands;
