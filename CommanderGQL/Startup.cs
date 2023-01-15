@@ -18,7 +18,7 @@ namespace CommanderGQL
 
         public void ConfigureServices(IServiceCollection services){
             //services.AddRazorPages();
-            services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer
+            services.AddPooledDbContextFactory<AppDbContext>(opt => opt.UseSqlServer
             (Configuration.GetConnectionString("DBConnectionString")));
             services.AddGraphQLServer()
             .AddQueryType<Query>();
