@@ -1,6 +1,5 @@
 using CommanderGQL.Data;
 using CommanderGQL.Models;
-using HotChocolate;
 
 namespace CommanderGQL.GraphQL
 {
@@ -11,6 +10,13 @@ namespace CommanderGQL.GraphQL
         public IQueryable<Platform> GetPlatform([ScopedService] AppDbContext context)
         {
             return context.Platforms; 
+        }
+
+        [UseDbContext(typeof(AppDbContext))]
+        [UseProjection]
+        public IQueryable<Command> GetCommand([ScopedService] AppDbContext context)
+        {
+            return context.Commands;
         }
     }
 }
