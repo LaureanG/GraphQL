@@ -27,7 +27,8 @@ namespace CommanderGQL
             .AddQueryType<Query>()
             .AddType<PlatformType>()
             .AddType<CommandType>()
-            .AddProjections();
+            .AddFiltering()
+            .AddSorting();
         }
 
         public void Configure(WebApplication app, IWebHostEnvironment env){
