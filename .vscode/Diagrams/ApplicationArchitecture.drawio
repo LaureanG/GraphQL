@@ -112,6 +112,12 @@
                 <mxCell id="32" value="HTTP Response" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FFFFFF;" parent="1" vertex="1">
                     <mxGeometry x="135" y="245" width="110" height="30" as="geometry"/>
                 </mxCell>
+                <mxCell id="35" value="GraphQL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="280" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="Web Sockets" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="280" width="60" height="20" as="geometry"/>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>

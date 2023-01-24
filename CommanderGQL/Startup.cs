@@ -26,10 +26,12 @@ namespace CommanderGQL
             .AddGraphQLServer()
             .AddQueryType<Query>()
             .AddMutationType<Mutation>()
+            .AddSubscriptionType<Subscription>()
             .AddType<PlatformType>()
             .AddType<CommandType>()
             .AddFiltering()
-            .AddSorting();
+            .AddSorting()
+            .AddInMemorySubscriptions(); //allows us to track in mememory our subscribers, in prod enviroment we need a persistence layer
         }
 
         public void Configure(WebApplication app, IWebHostEnvironment env){
@@ -44,6 +46,10 @@ namespace CommanderGQL
                 endpoints.MapGraphQL();
             });
             
+            //we need web sockets connection for subscriptions
+            app.UseWebSockets();
+
+            //
             app.UseGraphQLVoyager("/graphql-voyager",new VoyagerOptions()
             {
                 GraphQLEndPoint = "/graphql"
