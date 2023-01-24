@@ -14,4 +14,8 @@ Insomnia does not allow us to create socket connections, only Banana Cake Pop do
 TODO
 Update and Delete Mutations
 Add descriptions to the rest of the entities
+Research on: Relay specification, Data Loader pattern (n+1 pattern)
+
+Reference video
+https://www.youtube.com/watch?v=HuN94qNwQmM
 # GraphQL
